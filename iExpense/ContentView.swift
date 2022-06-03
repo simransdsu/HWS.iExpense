@@ -14,14 +14,14 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(expenses.items, id: \.name) { item in
+                ForEach(expenses.items) { item in
                     Text(item.name)
                 }.onDelete(perform: removeItems)
             }
             .navigationTitle("iExpense")
             .toolbar {
                 Button {
-                    let expense = ExpenseItem(name: "Test \(Int.random(in: 0...1000))", type: "Personal", amount: 5)
+                    let expense = ExpenseItem(name: "Test \(Int.random(in: 0...10))", type: "Personal", amount: 5)
                     expenses.items.append(expense)
                 } label: {
                     Image(systemName: "plus")
