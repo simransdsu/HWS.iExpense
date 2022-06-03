@@ -16,13 +16,20 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(expenses.items) { item in
-                    VStack {
-                        Text(item.name)
-                            .font(.title3)
-                        Text("$\(item.amount, format: .currency(code: "USD"))")
-                            .font(.caption)
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text(item.name)
+                                .font(.title2)
+                            Spacer()
+                            Text("\(item.amount, format: .currency(code: "USD"))")
+                                .font(.title3)
+                                .foregroundColor(.secondary)
+                        }
+                        Text(item.type)
+                            .font(.footnote)
                             .foregroundColor(.secondary)
                     }
+                    
                 }.onDelete(perform: removeItems)
             }
             .navigationTitle("iExpense")
