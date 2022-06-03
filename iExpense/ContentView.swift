@@ -10,22 +10,30 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject var expenses = Expenses()
+    @State var showAddView = false
     
     var body: some View {
         NavigationView {
             List {
                 ForEach(expenses.items) { item in
-                    Text(item.name)
+                    VStack {
+                        Text(item.name)
+                            .font(.title3)
+                        Text("$\(item.amount, format: .currency(code: "USD"))")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
                 }.onDelete(perform: removeItems)
             }
             .navigationTitle("iExpense")
             .toolbar {
                 Button {
-                    let expense = ExpenseItem(name: "Test \(Int.random(in: 0...10))", type: "Personal", amount: 5)
-                    expenses.items.append(expense)
+                    showAddView.toggle()
                 } label: {
                     Image(systemName: "plus")
                 }
+            }.sheet(isPresented: $showAddView) {
+                AddView(expenses: expenses)
             }
         }
     }

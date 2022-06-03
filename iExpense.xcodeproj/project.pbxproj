@@ -13,6 +13,7 @@
 		49E936F3284A4D2D00359052 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E936F2284A4D2D00359052 /* Preview Assets.xcassets */; };
 		49E936FA284A571400359052 /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E936F9284A571400359052 /* ExpenseItem.swift */; };
 		49E936FC284A574C00359052 /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E936FB284A574C00359052 /* Expenses.swift */; };
+		49E936FE284A5A8000359052 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E936FD284A5A8000359052 /* AddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		49E936F2284A4D2D00359052 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		49E936F9284A571400359052 /* ExpenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseItem.swift; sourceTree = "<group>"; };
 		49E936FB284A574C00359052 /* Expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
+		49E936FD284A5A8000359052 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				49E936F1284A4D2D00359052 /* Preview Content */,
 				49E936F9284A571400359052 /* ExpenseItem.swift */,
 				49E936FB284A574C00359052 /* Expenses.swift */,
+				49E936FD284A5A8000359052 /* AddView.swift */,
 			);
 			path = iExpense;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			files = (
 				49E936FC284A574C00359052 /* Expenses.swift in Sources */,
 				49E936EE284A4D2B00359052 /* ContentView.swift in Sources */,
+				49E936FE284A5A8000359052 /* AddView.swift in Sources */,
 				49E936FA284A571400359052 /* ExpenseItem.swift in Sources */,
 				49E936EC284A4D2B00359052 /* iExpenseApp.swift in Sources */,
 			);
